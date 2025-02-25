@@ -24,12 +24,11 @@ fs.readFile(csvFilePath, "utf8", (err, data) => {
 
       client
         .query(query, values)
-        .then((result) => {
-          console.log("Successfully inserted!", result.rows[0]);
-        })
+        .then()
         .catch((err) => {
           console.log("Unfortunately, there's an error", err);
         });
+      console.log("Finished Process");
     }
   }
 });
